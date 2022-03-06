@@ -2,13 +2,13 @@ const router = require('express').Router();
 const { } = require('../../lib/notes');
 const { notes } = require('../../data/notes');
 
-// router.get('/animals', (req, res) => {
-//     let results = animals;
-//     if (req.query) {
-//         results = filterByQuery(req.query, results);
-//     }
-//     res.json(results);
-//   });
+router.get('/notes', (req, res) => {
+    let results = notes;
+    // if (req.query) {
+    //     results = filterByQuery(req.query, results);
+    // }
+    res.json(results);
+  });
 
 // router.get('/animals/:id', (req, res) => {
 //   const result = findById(req.params.id, animals);
