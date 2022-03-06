@@ -1,14 +1,24 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "#### Team Profile Generator uses node.js to run a command line application that takes user input to capture the members of the team and then build a formatted HTML output to display the members of the team. ---",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdswartz/note-taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bdswartz/note-taker/issues"
+  },
+  "homepage": "https://github.com/bdswartz/note-taker#readme"
 }
