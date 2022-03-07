@@ -17,9 +17,9 @@ app.use(express.json());
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.get('/api/notes', (req, res) => {
-    res.json(notes);
-  });
+// app.get('/api/notes', (req, res) => {
+//     res.json(notes);
+//   });
 
 // instantiate the server
 app.listen(PORT, () => {
