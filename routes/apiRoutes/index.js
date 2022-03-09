@@ -2,17 +2,18 @@ const router = require('express').Router();
 const { createNewNote, deleteById, validateNote } = require('../../lib/notes');
 const { notes } = require('../../data/notes');
 const uniqid = require("uniqid");
+let getNotes = notes;
 
 // note that getting all notes does not call notes.js file for further processing
 router.get('/notes', (req, res) => {
-    let results = notes;
-    res.json(results);
+    res.json(getNotes);
   });
 
 // delete note using id parameter calling deleteById in notes.js
 router.delete('/notes/:id', (req, res) => {
   const result = deleteById(req.params.id, notes);
   if (result) {
+    getNotes = result
     res.json(result);
   } else {
     res.send(404);
@@ -28,7 +29,7 @@ router.post('/notes', (req, res) => {
     if (!validateNote(req.body)) {
       res.status(400).send('The note is not properly formatted.');
     } else {
-      const note = createNewNote(req.body, notes);
+      const note = createNewNote(req.body, getNotes);
       res.json(note);
     }
 });
