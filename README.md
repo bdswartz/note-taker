@@ -1,6 +1,6 @@
-# [Welcome to the Team Generator](https://github.com/bdswartz/team-profile-generator)
+# [Welcome to Note Taker](https://github.com/bdswartz/note-taker)
 
-#### Team Profile Generator uses node.js to run a command line application that takes user input to capture the members of the team and then build a formatted HTML output to display the members of the team.
+#### Not Taker is an integrated front end interface to a back end server created with express.js.  The function is to take user entered notes from the front end html/javascript and keep those notes in a back end server hosted on Heroku.
 ---
 
 #### Collaborators:
@@ -9,68 +9,50 @@
 ---
 
 ## Installation
-npm i
+N/A
 
 ---
 
 ## Usage
-run node index.js
-[Video Showing Use](./assets/use-video.mov)
-
----
-
-## User Story
-### AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
-    
-### Acceptance Criteria for Minimum Viable Product
-
-GIVEN a weather dashboard with form inputs
-
-*  GIVEN a command-line application that accepts user input
-*  WHEN I am prompted for my team members and their information
-    THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-*  WHEN I click on an email address in the HTML
-    THEN my default email program opens and populates the TO field of the email with the address
-*  WHEN I click on the GitHub username
-    THEN that GitHub profile opens in a new tab
-*  WHEN I start the application
-    THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
-*  WHEN I enter the team manager’s name, employee ID, email address, and office number
-    THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
-*  WHEN I select the engineer option
-    THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-*  WHEN I select the intern option
-    THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
-*  WHEN I decide to finish building my team
-    THEN I exit the application, and the HTML is generated
+Navigate to the landing page at [Note Taker](https://lit-peak-69304.herokuapp.com/)
 
 ---
 
 ## Technologies
 
 > <b>Development Tools:</b>
-  * Node.js
-    * Inquirer
+  * Express.js
     * File System
-    * Jest testing package
+    * Path
+    * Router
+    * uniqid - npm id generator 
   * JavaScript
   * HTML (to create application output)
-  * Bootstrap (to reduce number of files by not including a style sheet)
+
+  ---
+
+## User Story
+### AS A small business owner
+I WANT to be able to write and save notes
+SO THAT I can organize my thoughts and keep track of tasks I need to complete
+    
+### Acceptance Criteria for Minimum Viable Product
+
+GIVEN a note-taking application
+*  WHEN I open the Note Taker
+    THEN I am presented with a landing page with a link to a notes page
+*  WHEN I click on the link to the notes page
+    THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+*  WHEN I enter a new note title and the note’s text
+    THEN a Save icon appears in the navigation at the top of the page
+*  WHEN I click on the Save icon
+    THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
+*  WHEN I click on an existing note in the list in the left-hand column
+    THEN that note appears in the right-hand column
+*  WHEN I click on the Write icon in the navigation at the top of the page
+    THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ---
 
-## Features And Functionality
-Team Generator is designed to create an HTML page output based on user input at the command line. Features that are included in the application include the following:
-*  Ability to enter three different classes of employees (Manager, Engineer, Intern)
-*  Basic information displayed in card format on the HTML output.
-*  Basic information corresponds to the class of employee that is displayed.
-*  No need for a separate CSS stylesheet through use of Bootstrap CDN link in the HTML output.
-*  Working link to user's default email program upon clicking on each employee's email.
-*  Working link to each Engineer's GitHub account.
-
----
-
-## Tests
-npm test - Uses Jest testing package.
+![Application Page](app-screen-shot.jpg "Application Page")
+Screen shot showing the 'save' and 'add new' notes icons in the top right corner as well as the list of notes in the left pane.  Click the red trash can to delete a note.
